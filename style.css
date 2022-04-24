@@ -1,3 +1,109 @@
 .hidden{
     display: none;
 }
+
+#todo-list{
+    padding: 0;
+}
+
+#todo-list li{
+    cursor: pointer;
+    position: relative;
+    padding: 0.7rem 0.5rem 0.7rem 2rem;
+    list-style-type: none;
+    background: #eee;
+    font-size: 1rem;
+    transition: 0.2s;
+}
+
+#todo-list li:hover {
+    background: #ddd;
+  }
+
+#todo-list li.checked{
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+#todo-list li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+
+#todo-list button{
+    position: absolute;
+    right: 1%;
+    top: 0.2rem;
+    bottom: 0.2rem;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 12px;
+    background-color: #ffb2ad;
+}
+
+#todo-list button:hover {
+    background-color: #f44336;
+    color: white;
+  }
+
+.bgImg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.header{
+    position: relative;
+    display:inline-block;
+    width: 100%;
+    height: 70px;
+}
+
+#clock{
+    position: absolute;
+    top: 0.5rem;
+    left: 1rem;
+}
+
+#weather{
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+}
+
+.todo-container{
+    display: block;
+    width: 400px;
+    margin: 100px auto 0;
+    position: relative;
+}
+
+#greeting{
+    text-align: center;
+}
+
+#login-form{
+    text-align: center;
+}
+
+#todo-form{
+    text-align: center;
+}
+
+#quete{
+    position: absolute;
+    top: 85%;
+    width: 100%;
+    text-align: center;
+}

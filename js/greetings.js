@@ -5,6 +5,8 @@ const greeting = document.querySelector("#greeting");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 
+const todoSet = document.getElementById("todo-set");
+
 function onLoginSubmit(event){
     event.preventDefault();
     loginForm.classList.add(HIDDEN_CLASSNAME);
@@ -14,8 +16,10 @@ function onLoginSubmit(event){
 }
 
 function paintGreetings(username){
-    greeting.innerText = `Hello♥ ${username}`;
+    alert(`Hello, ${username}`);
+    greeting.innerText = `${username}님의 TODO LIST`;
     greeting.classList.remove(HIDDEN_CLASSNAME);
+    todoSet.classList.remove(HIDDEN_CLASSNAME);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
